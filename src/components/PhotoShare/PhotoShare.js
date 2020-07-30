@@ -5,9 +5,6 @@ import { db } from 'firebaseConfig';
 import Header from "components/Header";
 import Post from "components/Post";
 
-const login = 'Hello Login';
-const signup = 'Hello Signup';
-
 function PhotoShare() {
   const [posts, setPosts] = useState([]);
 
