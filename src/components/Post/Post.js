@@ -4,7 +4,7 @@ import Avatar from 'react-avatar';
 import "assets/css/Post.css";
 
 function Post(props) {
-  const { username, avatar, image, caption, location } = props.post;
+  const { username, avatar, image_url, caption, location } = props.post;
   return (
     <div className="post-container">
       <div className="post-header">
@@ -15,7 +15,7 @@ function Post(props) {
         </div>
       </div>
       <div className="post-img-wrapper">
-        <img src={image} alt="Aakrit Subedi" className="post-img" />
+        <img src={image_url} alt="Aakrit Subedi" className="post-img" />
       </div>
       <h4 className="post-text">
         <span className="post-username">{username}</span>&nbsp;

@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from "react";
 
+import { db } from 'firebaseConfig';
+
 import Header from "components/Header";
 import Post from "components/Post";
 
-const postsData = [
-  { username: 'Aakrit Subedi', avatar: '#', image: 'http://aakritsubedi.com.np/us/img/us/aakrit.jpg', caption: 'hey .. k cha khabr?', location: 'Kathmandu, Nepal' },
-  { username: 'Aakriti Subedi', avatar: '#', image: 'http://aakritsubedi.com.np/us/img/us/aakrit.jpg', caption: 'hey .. k cha khabr?', location: 'Kathmandu, Nepal' },
-  { username: 'Yukti Bhatt', avatar: 'http://aakritsubedi.com.np/images/profile_new.jpg', image: 'http://aakritsubedi.com.np/us/img/us/aakrit.jpg', caption: 'hey .. k cha khabr?', location: 'Kathmandu, Nepal' },
-  { username: 'Aakrit Subedi', avatar: 'http://aakritsubedi.com.np/images/profile_new.jpg', image: 'http://aakritsubedi.com.np/us/img/us/aakrit.jpg', caption: 'hey .. k cha khabr?', location: 'Kathmandu, Nepal' }
-]
+const login = 'Hello Login';
+const signup = 'Hello Signup';
 
 function PhotoShare() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    setPosts([...postsData])
+    db.collection('posts').onSnapshot(snapshot => {
+      setPosts(snapshot.docs.map(doc => ({ id: doc.id, post: doc.data() })));
+    })
   }, [])
+
   return (
     <div className="App">
-      <Header />
+      <Header  />
       <div className="post-wrapper">
-        {posts.map((post, index) => (
-          <Post post={post} key={index} />
+        {posts.map(({post, id}) => (
+          <Post post={post} key={id} />
         ))}
       </div>
     </div>
