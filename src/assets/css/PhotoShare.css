@@ -28,6 +28,7 @@
   width: fit-content;
   cursor: pointer;
 }
+
 .login-wrapper div .disabled {
   border: none;
   background-color: #f89e81;
@@ -67,6 +68,9 @@
   right: 10px;
   bottom: 10px;
   cursor: pointer;
+}
+.photoshare-add-post:focus {
+  outline: none;
 }
 
 .bdr-ripple-ani-btn {

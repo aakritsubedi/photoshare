@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function Uploader({ uploadImg, user }) {
   const [image, setImage] = useState(null);

@@ -9,15 +9,34 @@
   z-index: 5;
   width: 100%;
   top:0;
+  justify-content: space-between;
 }
 .header-logo-container {
   display: flex;
   flex-direction: row;
+  object-fit: contain;
 }
 .header-info-container {
   display: flex;
-  flex-direction: column;
-  margin-left: 75%;
+  flex-direction: row;
+}
+.header-info-container button{
+  border: none;
+  margin: 0 5px;
+  padding: 0 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.header-info-container button:hover {
+  background-color: #fafafa;
+}
+.header-info-container button:focus {
+  outline: none;
+}
+.header-login-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .header-logo {
   height:60px;

@@ -25,7 +25,7 @@ function Header({
             <button onClick={onSignUpClick}> Sign up </button>
           </>
         ) : (
-          <div> 
+          <div className='header-login-info'> 
             <Avatar
               size="35"
               name={user.displayName}
@@ -33,7 +33,6 @@ function Header({
               className="post-user-img"
               round={true}
             />
-            {user.displayName}
             <button onClick={onLogoutClick}> Logout </button>
           </div>
         )}
