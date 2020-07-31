@@ -1,9 +1,10 @@
 .post-wrapper {
   width: 60%;
-  margin: 10px auto;
-  background-color: #ffffff;
+  margin: 60px auto;
+  padding-top: 25px;
 }
 .post-container {
+  background-color: #ffffff;
   border: 1px solid #dbdbdb;
   margin-bottom: 50px;
 }

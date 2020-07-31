@@ -1,0 +1,33 @@
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.login-wrapper div {
+  margin: 5px 0;
+  padding: 10px 15px;
+}
+
+.login-wrapper div input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #e2e4e8;
+  padding: 0 5px;
+}
+
+.login-wrapper div button {
+  border: none;
+  background-color: #f17145;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 5px 15px;
+  width: fit-content;
+}
+
+.login-wrapper div input:focus {
+  outline: none;
+}

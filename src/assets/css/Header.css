@@ -5,20 +5,29 @@
   flex-direction: row;
   border-bottom: 1px solid #f3f3f3 ;
   background-color: #ffffff;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top:0;
 }
 .header-logo-container {
   display: flex;
   flex-direction: row;
 }
+.header-info-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75%;
+}
 .header-logo {
-  height:75px;
-  width: 75px;
+  height:60px;
+  width: 60px;
   object-fit: contain;
 }
 .header-title{
   font-family: 'Dancing Script', cursive;
-  line-height: 75px;
+  line-height: 60px;
   background: -webkit-linear-gradient(rgb(250, 211, 139), rgb(252, 60, 2));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
