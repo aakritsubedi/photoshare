@@ -43,7 +43,7 @@ function PhotoShare() {
     async function fetchuserIPInfo() {
       const userIpInfo = await fetch("https://ipapi.co/json").then((res) =>
         res.json()
-      );
+      ).catch(error => console.log(error));
       setUserIPInfo(userIpInfo);
     }
 
@@ -143,7 +143,7 @@ function PhotoShare() {
       />
       <div className="post-wrapper">
         {posts.map(({ post, id }) => (
-          <Post post={post} key={id} />
+          <Post post={post} postId={id} key={id} user={user} />
         ))}
       </div>
       <Modal

@@ -22,7 +22,6 @@
   color: #b9b9b9;
 }
 .post-img-wrapper {
-  
 }
 .post-img {
   width: 100%;
@@ -43,6 +42,35 @@
   font-weight: bold;
 }
 
+.post-comment-box {
+  display: flex;
+  border-top: 1px solid #dbdbdb;
+  margin: 10px 0;
+  padding: 10px 15px;
+  padding-bottom: 0px;
+}
+.post-comment-input {
+  flex: 1;
+  border: none;
+}
+.post-comment-input:focus {
+  outline: none;
+}
+.comment-wrapper {
+  padding: 5px 15px;
+}
+.post-comment-btn {
+  flex: 0;
+  padding: 0 10px;
+  border: none;
+  background-color: unset;
+  color: #6082a3;
+  font-weight: bold;
+  cursor: pointer;
+}
+.post-comment-btn:focus {
+  outline: none;
+}
 @media only screen and (max-width: 768px) {
   .post-wrapper {
     width: 75%;
