@@ -1,7 +1,7 @@
 .post-wrapper {
   width: 60%;
   margin: 60px auto;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 .post-container {
   background-color: #ffffff;
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 768px) {
   .post-wrapper {
-    width: 90%;
+    width: 75%;
   }
 }
 

@@ -23,7 +23,11 @@ function Signup({ userSignup }) {
           <input value={password} type="password"  onChange={e => setPassword(e.target.value)} placeholder="Enter password" />
         </div>
         <div>
-          <button type="submit" onClick={(e) => signUp(e)}> Signup </button>
+        {username && email && password ? (
+            <button type="submit" onClick={(e) => signUp(e)}> Signup </button>
+          ): (
+            <button type="submit" className='disabled'> Signup </button>
+        )}  
         </div>
       </form>
     </div>

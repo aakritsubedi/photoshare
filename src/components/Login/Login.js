@@ -18,7 +18,11 @@ function Login({   userLogin }) {
           <input value={password} type="password"  onChange={e => setPassword(e.target.value)} placeholder="Enter password" />
         </div>
         <div>
-          <button type="submit" onClick={(e) => login(e)}> Login </button>
+        {email && password ? (
+            <button type="submit" onClick={(e) => login(e)}> Login </button>
+          ): (
+            <button type="submit" className='disabled'> Login </button>
+        )}  
         </div>
       </form>
     </div>
